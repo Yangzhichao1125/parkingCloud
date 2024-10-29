@@ -3,8 +3,8 @@
     <div class="login-form-title">{{ $t('login.form.title') }}</div>
     <div class="login-form-sub-title">请使用APP/微信/支付宝扫码</div>
     <div class="login-form-error-msg">{{ errorMessage }}</div>
-    <a-image :src="'data:image/png;base64,' + loginImage" width="200" />
-    <icon-refresh @click="onRefresh" />
+    <!-- <a-image :src="'data:image/png;base64,' + loginImage" width="200" /> -->
+    <!-- <icon-refresh @click="onRefresh" /> -->
     <a-form
       ref="loginForm"
       :model="userInfo"
@@ -111,31 +111,31 @@
     loginImage.value = '';
   });
   const getCode = async () => {
-    let base64 = urlToBase64(qrcodeIconImg);
-    base64.then(async (resolve)=>{
-      const { data, code } = await createLoginQrCode({
-      width: "400",
-      height: "400",
-      contentType: 1,
-      doMainId: _doMainId,
-      logoText: _loginQcodeText,
-      logoIconBase64: resolve.substr(resolve.indexOf(',')+1)
-    });
-    if (code === 10002) {
-      loginImage.value = data.qr_code_images;
-      Timer = setInterval(() => {
-        checkCodeStatus(data.qr_code.id, data.qr_code.randomCode);
-        TimerNum += 1;
-        if (TimerNum >= 490) {
-          clearInterval(Timer);
-          TimerNum = 0;
-          loginImage.value = '';
-          Message.error('码已失效 请手动刷新');
-          // getCode()
-        }
-      }, 1000);
-    }
-    })
+    // let base64 = urlToBase64(qrcodeIconImg);
+    // base64.then(async (resolve)=>{
+    //   const { data, code } = await createLoginQrCode({
+    //   width: "400",
+    //   height: "400",
+    //   contentType: 1,
+    //   doMainId: _doMainId,
+    //   logoText: _loginQcodeText,
+    //   logoIconBase64: resolve.substr(resolve.indexOf(',')+1)
+    // });
+    // if (code === 10002) {
+    //   loginImage.value = data.qr_code_images;
+    //   Timer = setInterval(() => {
+    //     checkCodeStatus(data.qr_code.id, data.qr_code.randomCode);
+    //     TimerNum += 1;
+    //     if (TimerNum >= 490) {
+    //       clearInterval(Timer);
+    //       TimerNum = 0;
+    //       loginImage.value = '';
+    //       Message.error('码已失效 请手动刷新');
+    //       // getCode()
+    //     }
+    //   }, 1000);
+    // }
+    // })
   };
 
 
