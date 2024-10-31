@@ -11,7 +11,7 @@ export interface LoginRes {
   token: string;
 }
 export function login(data: LoginData) {
-  return axios.post<LoginRes>('/ucenterAdmin/cfAuth/login', data);
+  return axios.post<LoginRes>('/authAdmin/login', data);
 }
 
 export function logout() {
@@ -31,7 +31,7 @@ export function getMenuList() {
 }
 
 export function selectTreeByUser() {
-  return axios.get<any>('/ucenterAdmin/cfAuth/selectTreeByUser');
+  return axios.get<any>('/authAdmin/getAuths');
 }
 export function getAuthListByQuery(params: any) {
   return axios.get<any>('/ucenterAdmin/cfAuth/getListByQuery', params);
