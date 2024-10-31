@@ -27,8 +27,8 @@ spring:
         maxWait: -1
 auth:
   tokenValiditySeconds: 1200  #redis的token的过期时间(暂时不用)
-  clientId: yangzhichao
-  clientSecret: 123qwe
+  clientId: admin
+  clientSecret: 123456
   cookieDomain: xuecheng.com
   cookieMaxAge: -1
 dubbo:

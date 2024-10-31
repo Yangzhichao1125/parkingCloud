@@ -104,7 +104,7 @@ public class AuthSwaggerController implements AuthSwagger {
         return new ResponseResult(CommonCode.SUCCESS, deleteResult);
     }
 
-    @PreAuthorize("hasAuthority('ucenter-AuthSwaggerController-getAuths')")
+//    @PreAuthorize("hasAuthority('ucenter-AuthSwaggerController-getAuths')")
     @Override
     @RequestMapping(value = "getAuths", method = RequestMethod.GET)
     public ResponseResult getAuths(
