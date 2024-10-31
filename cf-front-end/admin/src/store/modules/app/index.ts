@@ -5,6 +5,7 @@ import type { RouteRecordNormalized } from 'vue-router';
 import defaultSettings from '@/config/settings.json';
 import { selectTreeByUser } from '@/api/user';
 import { AppState } from './types';
+import {appRoutes} from '@/router/routes'
 
 const useAppStore = defineStore('app', {
   state: (): AppState => ({ ...defaultSettings }),
@@ -55,7 +56,7 @@ const useAppStore = defineStore('app', {
         var { data } = await selectTreeByUser();
         console.log('拉取到的数据', data);
         if (data !== null) {
-          this.serverMenu = data;
+          this.serverMenu = appRoutes;
           notifyInstance = Notification.success({
             id: 'menuNotice',
             content: 'success',
