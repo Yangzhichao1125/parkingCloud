@@ -15,7 +15,7 @@ setupMock({
             'id|+1': 1,
             'username': '用户7352772',
             'content': '马上就开始了，好激动！',
-            'time': '13:09:12',
+            'time': '13:09:122',
             'isCollect|2': true,
           },
         ],
