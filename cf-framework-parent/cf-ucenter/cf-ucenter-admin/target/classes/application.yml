@@ -36,8 +36,8 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
 auth:
   tokenValiditySeconds: 1200
-  clientId: yangzhichao
-  clientSecret: 123qwe
+  clientId: admin
+  clientSecret: 123456
   cookieDomain: xuecheng.com
   cookieMaxAge: -1
 

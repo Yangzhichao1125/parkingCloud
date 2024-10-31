@@ -64,7 +64,9 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
   provider:
     filter: -exception
-
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
 
 
